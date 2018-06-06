@@ -22,8 +22,10 @@ function rndmCode($codeForm = null) {
   return($code);
 }
 
-$code = rndmCode();
+$retval = Array();
+
+$retval['code'] = rndmCode();
 
 header('Content-type: application/json');
-exit(json_encode($code));
+exit(json_encode($retval));
 ?>
