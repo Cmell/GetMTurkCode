@@ -23,5 +23,7 @@ function rndmCode($codeForm = null) {
 }
 
 $code = rndmCode();
-echo $code;
+
+header('Content-type: application/json');
+exit(json_encode($code));
 ?>
